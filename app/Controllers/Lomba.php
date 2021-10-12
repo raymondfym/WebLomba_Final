@@ -23,14 +23,18 @@ class Lomba extends BaseController
         return view('tambahLomba');
     }
 
-    public function editLomba()
+    public function editLomba($id)
     {
-        return view('editLomba');
+        $data = [
+            'data'=>$this->KategoriLombaModel->find($id)
+        ];
+        return view('editLomba', $data);
     }
 
-    public function hapusLomba()
+    public function hapusLomba($id)
     {
-        return view('hapusLomba');
+        $this->KategoriLombaModel->delete($id);
+        return redirect()->to('/admin');
     }
 
     public function simpan()

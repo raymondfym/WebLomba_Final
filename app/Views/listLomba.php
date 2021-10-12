@@ -35,10 +35,12 @@
                 <td><?= $lomba['kategori_lomba']; ?></td>
                 <td><?= $lomba['status_lomba']; ?></td>
                 <td>
-                    <a href=""><button>
+                    <a href="Lomba/editLomba/<?= $lomba['lomba_id']; ?>">
+                        <button type="button" class="btn">
                             Edit
                         </button></a>
-                    <a href=""><button>
+                    <a href="Lomba/hapusLomba/<?= $lomba['lomba_id']; ?>">
+                        <button type="button" class="btn">
                             Hapus
                         </button></a>
                 </td>
