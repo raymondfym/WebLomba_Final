@@ -33,7 +33,7 @@ class Lomba extends BaseController
     public function hapusLomba($id)
     {
         $this->KategoriLombaModel->delete($id);
-        return redirect()->to('/admin');
+        return redirect()->to('/   ');
     }
 
     public function simpan()
@@ -46,7 +46,19 @@ class Lomba extends BaseController
         ];
         // dd($data);
         $this->KategoriLombaModel->insert($data);
-        return redirect()->to('/admin');
+        return redirect()->to('/');
+    }
+    public function ubah($id)
+    {
+        // dd($this->request->getVar());
+        $request = service('request');
+        $data = [
+            'kategori_lomba'    => $this->request->getVar('namaLomba'),
+            'status_lomba'     => $this->request->getVar('statusLomba')
+        ]; 
+        
+        $this->KategoriLombaModel->update($id,$data);
+        return redirect()->to('/');
     }
 
     public function update($id)

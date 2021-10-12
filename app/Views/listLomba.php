@@ -17,10 +17,9 @@
 </head>
 
 <body>
-    <!-- <button>Tambah Lomba</button><br> -->
-    <h1>Kategori Lomba</h1>
-    <a href="/Lomba/tambahLomba">
-        <button>Tambah Lomba</button>
+    <h1>List Lomba</h1>
+    <a href="/Lomba/Tambah">
+        <button>TambahLomba</button>
     </a>
     <br>
     <br>
@@ -38,11 +37,11 @@
                 <td><?= $lomba['kategori_lomba']; ?></td>
                 <td><?= $lomba['status_lomba']; ?></td>
                 <td>
-                    <a href="Lomba/editLomba/<?= $lomba['lomba_id']; ?>">
+                    <a href="Lomba/Edit/<?= $lomba['lomba_id']; ?>">
                         <button type="button" class="btn">
                             Edit
                         </button></a>
-                    <a href="Lomba/hapusLomba/<?= $lomba['lomba_id']; ?>">
+                    <a href="Lomba/Hapus/<?= $lomba['lomba_id']; ?>">
                         <button type="button" class="btn">
                             Hapus
                         </button></a>
