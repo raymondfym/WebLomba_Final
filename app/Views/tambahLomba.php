@@ -15,8 +15,9 @@
         <input type="text" id="namaLomba" name="namaLomba" placeholder="Nama Lomba"><br>
         <label for="namaLomba">Status Lomba:</label>
         <select id="statusLomba" name="statusLomba">
-            <option value="aktif">Aktif</option>
-            <option value="nonaktif">Nonaktif</option>
+            <option selected disabled hidden>Status Lomba</option>
+            <option value="Aktif">Aktif</option>
+            <option value="Nonaktif">Nonaktif</option>
         </select><br>
         <button type="submit">Tambahkan</button>
     </form>

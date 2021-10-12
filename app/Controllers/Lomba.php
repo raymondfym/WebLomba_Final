@@ -25,9 +25,8 @@ class Lomba extends BaseController
 
     public function editLomba($id)
     {
-        $data = [
-            'data'=>$this->KategoriLombaModel->find($id)
-        ];
+        $data['data'] = $this->KategoriLombaModel->find($id);
+
         return view('editLomba', $data);
     }
 
@@ -47,6 +46,18 @@ class Lomba extends BaseController
         ];
         // dd($data);
         $this->KategoriLombaModel->insert($data);
+        return redirect()->to('/admin');
+    }
+
+    public function update($id)
+    {
+        $data = [
+            // 'key_in_migration' => $request->getVar('name_Attr'),
+            'kategori_lomba'    => $this->request->getVar('namaLomba'),
+            'status_lomba'     => $this->request->getVar('statusLomba')
+        ];
+        // dd($data);
+        $this->KategoriLombaModel->update($id, $data);
         return redirect()->to('/admin');
     }
 }

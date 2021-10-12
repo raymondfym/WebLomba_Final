@@ -18,9 +18,12 @@
 
 <body>
     <!-- <button>Tambah Lomba</button><br> -->
+    <h1>Kategori Lomba</h1>
     <a href="/Lomba/tambahLomba">
-        <button>TambahLomba</button>
+        <button>Tambah Lomba</button>
     </a>
+    <br>
+    <br>
     <table>
         <tr>
             <th>No</th>
