@@ -14,15 +14,13 @@
         <label for="namaLomba">Nama Lomba:</label>
         <input type="text" id="namaLomba" name="namaLomba" value="<?= $data['kategori_lomba']; ?>"><br>
         <label for="status">Status Lomba:</label>
+
         <select id="statusLomba" name="statusLomba">
-        <?php if($data['status_lomba']=="aktif"):?>
-            <option selected value="aktif">Aktif</option>
-            <option value="nonaktif">Nonaktif</option>
-        <?php elseif($data['status_lomba']!="aktif"):?>
-            <option value="aktif">Aktif</option>
-            <option selected value="nonaktif">Nonaktif</option>
-        <?php endif?>
-        </select><br>       
+            <option value="Aktif" <?= $data['status_lomba'] === 'Aktif' ? 'Selected' : ''; ?>>Aktif</option>
+            <option value="Nonaktif" <?= $data['status_lomba'] === 'Nonaktif' ? 'Selected' : ''; ?>>Nonaktif</option>
+        </select><br>
+
+      
         <button type="submit">Apply</button> 
     </form>
 </body>
