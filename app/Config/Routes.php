@@ -31,7 +31,8 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Lomba::index');
+// $routes->get('/', 'Lomba::index');
+$routes->get('/', 'Home::index');
 $routes->get('/Lomba/Tambah/', 'Lomba::tambahLomba');
 $routes->get('/Lomba/Edit/(:segment)', 'Lomba::editLomba/$1');
 $routes->get('/Lomba/Hapus/(:segment)', 'Lomba::hapusLomba/$1');
